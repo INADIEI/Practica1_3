@@ -1,3 +1,44 @@
+function Size(width, height){
+    this.width = width || 80;
+    this.height = height || 60;
+    this.resize = function(newWidth, newHeight){
+        this.width = newWidth;
+        this.height = newHeight;
+    };
+}
+
+function Possition(x, y){
+    this.x = x || 0;
+    this.y = y || 0;
+    this.move = function(newX, newY){
+        this.x = newX;
+        this.y = newY;
+    };
+}
+
+function ProgramWindow(screenSize, size, position){
+    this.screenSize = Size(800, 600);
+    this.size = Size();
+    this.position = Possition();
+    this.resize = function(Size){
+        if(width >= 1 && height >= 1){
+            this.screenSize = Size(width, height)
+        }
+        else{
+            if(Size.width < 1){
+                Size.width = 1;
+                this.screenSize = Size(width, height);
+            }
+            else{
+                Size.height = 1;
+                this.screenSize = Size(width, height);
+            }
+        }
+    };
+    this.move = function(Possition){
+        this.position = Possition();
+    };
+}
 
 const size =new Size(1080,764);
 size.width;
@@ -6,7 +47,7 @@ size.height;
 // => 764
 
 size.resize(1920, 1080);
-siza.width;
+size.width;
 // => 1920
 size.height;
 // => 10180
