@@ -36,9 +36,33 @@ function ProgramWindow(screenSize, size, position){
         }
     };
     this.move = function(Possition){
-        this.position = Possition();
+        if(x >= 0 && y >= 0){
+            if(x >= width && y >= height ){
+                this.position = Possition(x, y); // Se debe modificar solo que no se con que restricciones o condiciones
+            }else{
+                this.position = Possition(x, y);
+            }
+        }
+        else{
+            if(Possition.x < 0){
+                Possition.x = 1;
+                this.position = Possition(x, y);
+            }
+            else{
+                Possition.y = 1;
+                this.position = Possition(x, y);
+            }
+        }
     };
 }
+
+function changeWindow(ProgramWindow) {
+    ProgramWindow.Size(400, 300);
+    ProgramWindow.Possition(100, 150);
+
+    return programWindow;
+}
+
 
 const size =new Size(1080,764);
 size.width;
