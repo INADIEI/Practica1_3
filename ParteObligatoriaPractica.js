@@ -74,7 +74,7 @@ size.resize(1920, 1080);
 size.width;
 // => 1920
 size.height;
-// => 10180
+// => 1080
 
 const point=new Possition();
 point.x;
@@ -86,26 +86,24 @@ point.move(100,200);
 point.x;
 point.y;
 
-const programWindow = new ProgramWindow();
-programWindow.screenSize.width;
+let programWindow1 = new ProgramWindow();
+programWindow1.screenSize.width;
 // =>800
 
-const programWindow = new ProgramWindow();
-
-const newSize(600,400)
-programWindow.resize(newSize);
-programWindow.size.width;
+let programWindow2 = new ProgramWindow();
+const newSize = new Size(600,400);
+programWindow2.resize(newSize);
+programWindow2.size.width;
 //=> 600
-programWindow.size.height;
+programWindow2.size.height;
 // =>400
 
-const programWindow = new ProgramWindow();
-
+let programWindow3 = new ProgramWindow();
 const newPossition = new Possition(50,100);
-programWindow.move(newPossition);
-programWindow.position.x;
-programWindow.position.y;
+programWindow3.move(newPossition);
+programWindow3.position.x;
+programWindow3.position.y;
 
-const programWindow = new ProgramWindow();
-changeWindow(programWindow);
-programWindow.size.width;
+let programWindow4 = new ProgramWindow();
+changeWindow(programWindow4);
+programWindow4.size.width;
