@@ -38,7 +38,7 @@ function ProgramWindow(screenSize, size, position){
     this.move = function(Possition){
         if(x >= 0 && y >= 0){
             if(x >= width && y >= height ){
-                this.position = Possition(x, y); // Se debe modificar solo que no se con que restricciones o condiciones
+                this.position = Possition(550, 200);
             }else{
                 this.position = Possition(x, y);
             }
